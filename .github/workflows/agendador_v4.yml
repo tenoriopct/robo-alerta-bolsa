@@ -10,7 +10,7 @@ on:
   # Horas UTC: 12h até 21h (Equivalente a 09h até 18h Brasil)
   schedule:
     #- cron: '3,18,33,48 12-21 * * *'
-    - cron: '*/5 * * * *'
+    - cron: '*/6 * * * *'
   
   workflow_dispatch:
 
