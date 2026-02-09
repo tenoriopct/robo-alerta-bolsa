@@ -8,7 +8,13 @@ on:
   # 2. Agendamento Otimizado (Sweet Spot):
   # Roda nos minutos 03, 18, 33 e 48 para fugir do engarrafamento dos minutos redondos
   schedule:
-    - cron: '3,18,33,48 * * * *'
+    # LINHA 1: A "rebarba" das 09h (12h UTC)
+    # Roda apenas no minuto 48 (que é > 45), ou seja, às 09:48 BRT
+    - cron: '48 12 * * *'
+
+    # LINHA 2: O expediente completo das 10h às 17h59 (13h às 20h UTC)
+    # Roda normalmente 4 vezes por hora
+    - cron: '3,18,33,48 13-20 * * *'
   
   # 3. Botão Manual
   workflow_dispatch:
