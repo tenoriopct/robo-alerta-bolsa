@@ -1,15 +1,23 @@
 name: Bot Trader Bolsa
 
 on:
+  # 1. Gatilho de Push: Obriga o GitHub a "acordar" o agendador assim que você salvar
+  push:
+    branches: [ "main" ]
+  
+  # 2. Agendamento Otimizado (Sweet Spot):
+  # Roda nos minutos 03, 18, 33 e 48 para fugir do engarrafamento dos minutos redondos
   schedule:
-  - cron: '7,22,37,52 * * * *'
-  workflow_dispatch:        # Permite rodar manualmente para testar
+    - cron: '3,18,33,48 * * * *'
+  
+  # 3. Botão Manual
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     
-    # IMPORTANTE: Permissão para o robô salvar o histórico
+    # Permissão para o robô salvar arquivos no repositório
     permissions:
       contents: write
 
@@ -35,6 +43,15 @@ jobs:
         run: |
           git config --global user.name "Bot Trader"
           git config --global user.email "bot@github.actions"
+          
+          # Adiciona os arquivos de memória e log
           git add memoria_alertas.json historico_robo.txt
+          
+          # Tenta commitar. O "|| echo" evita erro se não houver mudanças
           git commit -m "Auto: Atualizando histórico [skip ci]" || echo "Nada para salvar"
+          
+          # Previne erro de conflito baixando atualizações antes de enviar
+          git pull --rebase --autostash
+          
+          # Envia para o repositório
           git push
