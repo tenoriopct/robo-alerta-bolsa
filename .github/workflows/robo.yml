@@ -1,0 +1,40 @@
+name: Bot Trader Bolsa
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Roda a cada 15 minutos (00, 15, 30, 45)
+  workflow_dispatch:        # Permite rodar manualmente para testar
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    # IMPORTANTE: Permissão para o robô salvar o histórico
+    permissions:
+      contents: write
+
+    steps:
+      - name: 1. Baixar código
+        uses: actions/checkout@v3
+
+      - name: 2. Instalar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: 3. Instalar bibliotecas
+        run: pip install -r requirements.txt
+
+      - name: 4. Rodar Robô
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: python main.py
+
+      - name: 5. Salvar Memória e Logs
+        run: |
+          git config --global user.name "Bot Trader"
+          git config --global user.email "bot@github.actions"
+          git add memoria_alertas.json historico_robo.txt
+          git commit -m "Auto: Atualizando histórico [skip ci]" || echo "Nada para salvar"
+          git push
