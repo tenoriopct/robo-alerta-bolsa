@@ -2,8 +2,7 @@ name: Bot Trader Bolsa
 
 on:
   schedule:
-# Roda nos minutos: 02, 17, 32, 47
-  - cron: '2,17,32,47 * * * *'
+  - cron: '7,22,37,52 * * * *'
   workflow_dispatch:        # Permite rodar manualmente para testar
 
 jobs:
