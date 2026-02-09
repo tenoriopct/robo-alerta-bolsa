@@ -2,7 +2,8 @@ name: Bot Trader Bolsa
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Roda a cada 15 minutos (00, 15, 30, 45)
+# Roda nos minutos: 02, 17, 32, 47
+  - cron: '2,17,32,47 * * * *'
   workflow_dispatch:        # Permite rodar manualmente para testar
 
 jobs:
