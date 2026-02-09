@@ -210,7 +210,8 @@ def analisar_ativo(ativo):
         inf_crit = banda_inf * (1 - PORCENTAGEM_EXTRA)
 
         # Log visual rápido (sem salvar em arquivo para não lotar, salva só no final se tiver msg)
-        print(f"🔎 {ativo}: ${preco:.2f} (RSI: {ifr_atual:.0f})")
+        #print(f"🔎 {ativo}: ${preco:.2f} (RSI: {ifr_atual:.0f})")
+        registrar_log(f"🔎 {ativo}: ${preco:.2f} (RSI: {ifr_atual:.0f})")
 
         # Mensagens
         msg = ""
@@ -244,7 +245,7 @@ def analisar_ativo(ativo):
 
 # --- INÍCIO DA EXECUÇÃO (SINGLE PASS) ---
 if __name__ == "__main__":
-    print("--- INICIANDO EXECUÇÃO (GITHUB ACTIONS) ---")
+    #print("--- INICIANDO EXECUÇÃO (GITHUB ACTIONS) ---")
     
     # 1. Carrega a memória do arquivo JSON
     carregar_memoria()
@@ -266,4 +267,4 @@ if __name__ == "__main__":
     else:
         print("Nenhum novo alerta enviado. Memória intacta.")
         
-    print("--- FIM DA EXECUÇÃO ---")
+    #print("--- FIM DA EXECUÇÃO ---")
