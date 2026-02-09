@@ -1,4 +1,4 @@
-name: Bot Trader Bolsa V3
+name: Bot Trader Bolsa V4
 
 on:
   # Garante que funciona tanto se sua branch for main quanto master
