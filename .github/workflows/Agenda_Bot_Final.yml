@@ -1,4 +1,4 @@
-name: Bot Trader Bolsa V4
+name: Bot Trader Bolsa Final
 
 on:
   # Garante que funciona tanto se sua branch for main quanto master
@@ -9,8 +9,8 @@ on:
   # Minutos: 03, 18, 33, 48
   # Horas UTC: 12h até 21h (Equivalente a 09h até 18h Brasil)
   schedule:
-    #- cron: '3,18,33,48 12-21 * * *'
-    - cron: '*/6 * * * *'
+    - cron: '3,18,33,48 13-20 * * *'
+    #- cron: '*/6 * * * *'
   
   workflow_dispatch:
 
