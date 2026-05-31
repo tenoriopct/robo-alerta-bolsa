@@ -20404,3 +20404,5 @@
 [30/05 18:42] Resumo diário enviado.
 [30/05 18:42] --- Ciclo 18:42 iniciado ---
 [30/05 18:43] 🔎 BTC-USD: $73901.56 (RSI: 38)
+[31/05 11:48] --- Ciclo 11:48 iniciado ---
+[31/05 11:49] 🔎 BTC-USD: $73580.13 (RSI: 37)
