@@ -21087,3 +21087,6 @@
 [05/06 18:28] 🔎 BTC-USD: $61562.65 (RSI: 16)
 [06/06 11:43] --- Ciclo 11:43 iniciado ---
 [06/06 11:44] 🔎 BTC-USD: $60936.00 (RSI: 16)
+[06/06 12:57] --- Ciclo 12:57 iniciado ---
+[06/06 12:57] 🔎 BTC-USD: $60746.92 (RSI: 15)
+[06/06 12:57] ⚡ ALERTA DISPARADO: BTC-USD
