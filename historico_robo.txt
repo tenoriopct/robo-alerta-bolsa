@@ -22552,3 +22552,5 @@
 [20/06 18:20] Resumo diário enviado.
 [20/06 18:20] --- Ciclo 18:20 iniciado ---
 [20/06 18:21] 🔎 BTC-USD: $63881.69 (RSI: 39)
+[21/06 12:11] --- Ciclo 12:11 iniciado ---
+[21/06 12:12] 🔎 BTC-USD: $64111.92 (RSI: 40)
