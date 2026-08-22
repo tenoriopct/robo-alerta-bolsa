@@ -35111,3 +35111,6 @@
 [22/08 16:36] 🔎 BTC-USD: $77340.45 (RSI: 81)
 [22/08 16:57] --- Ciclo 16:57 iniciado ---
 [22/08 16:57] 🔎 BTC-USD: $77450.45 (RSI: 82)
+[22/08 17:25] --- Ciclo 17:25 iniciado ---
+[22/08 17:26] 🔎 BTC-USD: $77347.29 (RSI: 81)
+[22/08 17:26] ⚡ ALERTA DISPARADO: BTC-USD
