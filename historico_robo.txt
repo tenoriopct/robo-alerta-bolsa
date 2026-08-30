@@ -36492,3 +36492,5 @@
 [29/08 18:58] Resumo diário enviado.
 [29/08 18:58] --- Ciclo 18:58 iniciado ---
 [29/08 18:59] 🔎 BTC-USD: $78158.02 (RSI: 72)
+[30/08 14:14] --- Ciclo 14:14 iniciado ---
+[30/08 14:15] 🔎 BTC-USD: $79143.76 (RSI: 73)
